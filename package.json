@@ -1,0 +1,19 @@
+{
+  "name": "csv-to-drupal",
+  "version": "1.0.0",
+  "description": "Parse a csv file and import it into drupal",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "node -e 'require(\"./index.js\").execute()'",
+    "test": "node -e 'require(\"./index.js\").testFile()'"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "csv-parse": "^4.14.2"
+  }
+}
