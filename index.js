@@ -35,7 +35,7 @@ const processFile = async () => {
  * Convert the array of CSV data into Drupal data ready for JsonAPI.
  * 
  * @param {array} data
- *   
+ *   List of the CSV data stored as arrays.
  */
 const prepareNodes = data => {
   // Remove the first row as headers
@@ -48,7 +48,7 @@ const prepareNodes = data => {
         attributes: {
           title: item[0],
           body: {
-            value: `<p>${item[1]}</p>`,
+            value: item[1],
             format: 'basic_html'
           }
           // Add more fields here.
@@ -85,10 +85,10 @@ const postToDrupal = async data => {
 
 module.exports.testFile = async function () {
   const records = await processFile()
-  console.info(records)
+  console.info('CSV Data', records)
 
   const data = prepareNodes(records)
-  console.info(data)
+  console.info('Drupal Data', data)
 };
 
 module.exports.execute = async function () {
@@ -96,7 +96,7 @@ module.exports.execute = async function () {
   const data = prepareNodes(records)
 
   // Import the content into Drupal.
-  for await (const node of data) {
+  for (const node of data) {
     await postToDrupal(node)
   }
 

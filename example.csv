@@ -1,4 +1,4 @@
 ﻿Title,Body
-Item 1,I am text in the first Body.
-Item 2,This is the second item's body.
-Item 3,Some text in the body field.
+Item 1,<p>I am text in the first Body.</p>
+Item 2,<p>This is the second item's body.</p>
+Item 3,<p>Some text in the body field.</p>

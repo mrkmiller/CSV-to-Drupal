@@ -6,7 +6,8 @@ This is just some example code for taking a local CSV file and importing each ro
 
 1. Ensure Drupal is ready to import data.
 
-Also, on the drupal site be sure to have the `JSON:API` and `HTTP Basic Authentication` modules enabled.
+On the drupal site be sure to have the `JSON:API` and `HTTP Basic Authentication` modules enabled.
+
 Then on the JsonAPI config page `/admin/config/services/jsonapi`, "Accept all JSON:API create, read, update, and delete operations." needs to be selected.
 
 2. Installation of Node.js packages.
