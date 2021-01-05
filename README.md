@@ -1,18 +1,27 @@
 This is just some example code for taking a local CSV file and importing each row as a node into Drupal.
 
-1. Installation
+1. Ensure Drupal is ready to import data.
+
+Also, on the drupal site be sure to have the `JSON:API` and `HTTP Basic Authentication` modules enabled.
+Then on the JsonAPI config page `/admin/config/services/jsonapi`, "Accept all JSON:API create, read, update, and delete operations." needs to be selected.
+
+2. Installation of Node.js packages.
 ```
 npm install
 ```
 
-2. Edit the index.js file with the CSV file location, Url, Username/Password, and any fields that should go into Drupal.
+3. Edit the `index.js` file to reflect your custom info.
 
-3. Test the CSV parsing
+Change variable values for the __CSV file__ location, __Url__, __Username/Password__, and Drupal __Entity Type__.
+
+Add any __Fields__ needed by the Drupal entity into the `prepareNodes()` function.
+
+4. Test the CSV parsing.
 ```
 npm test
 ```
 
-4. Import the files into Drupal
+5. Import the files into Drupal.
 ```
 npm start
 ```

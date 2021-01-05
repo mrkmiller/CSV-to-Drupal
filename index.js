@@ -12,6 +12,8 @@ const auth = {
   password: 'admin'
 };
 
+const entityType = 'node--page'
+
 /**
  * Convert the CSV file into an array of data.
  */
@@ -42,7 +44,7 @@ const prepareNodes = data => {
   const nodes = data.map(item => {
     return {
       data: {
-        type: 'node--page',
+        type: entityType,
         attributes: {
           title: item[0],
           body: {
