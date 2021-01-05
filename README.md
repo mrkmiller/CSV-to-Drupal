@@ -1,4 +1,8 @@
+# Example CSV import into Drupal
+
 This is just some example code for taking a local CSV file and importing each row as a node into Drupal.
+
+## Setup
 
 1. Ensure Drupal is ready to import data.
 
@@ -16,12 +20,14 @@ Change variable values for the __CSV file__ location, __Url__, __Username/Passwo
 
 Add any __Fields__ needed by the Drupal entity into the `prepareNodes()` function.
 
-4. Test the CSV parsing.
+## Running the Import
+
+1. Test the CSV parsing.
 ```
 npm test
 ```
 
-5. Import the files into Drupal.
+2. Import the files into Drupal.
 ```
 npm start
 ```
